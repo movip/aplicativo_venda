@@ -7,3 +7,16 @@ services:
     restart: always
     ports:
       - '8501:8501'
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - USER=admin
+      - PASSWORD=admin
+      - DB=venda
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./venda_data:/var/lib/venda/data
