@@ -6,7 +6,7 @@ from modules.venda import Venda
 
 def main():
 
-    st.title("Sistema de CRM e Vendas da ZapFlow = Frontend Simples")
+    st.title("Sistema de CRM e Vendas = Frontend Simples")
     nome = st.text_input("Nome do usuário")
     genero = st.chat_input("Genero")
     email = st.text_input("Email do vendedor")

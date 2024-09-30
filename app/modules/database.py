@@ -1,6 +1,6 @@
 import psycopg2
 from psycopg2 import sql
-from venda import Venda
+from modules.venda import Venda
 import streamlit as st
 from dotenv import load_dotenv
 import os
