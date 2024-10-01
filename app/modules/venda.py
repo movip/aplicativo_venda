@@ -18,7 +18,9 @@ class Venda(BaseModel):
     Modelo de dados para as vendas.
 
     Args:
+        nome: nome cliente
         email: email do comprador
+        genero: genero do produto
         data: data da compra
         valor: valor da compra
         quantidade: quantidade de produtos
@@ -26,7 +28,7 @@ class Venda(BaseModel):
     """
     nome: str
     email: EmailStr
-    genero: bool
+    genero: str
     data: datetime
     valor: PositiveFloat
     quantidade: PositiveInt

@@ -7,6 +7,11 @@ services:
     restart: always
     ports:
       - '8501:8501'
+    environment:
+      - DB_HOST=postgres
+      - DB_USER=admin
+      - DB_PASS=admin
+      - DB_NAME=venda
     depends_on:
       - postgres
   postgres:
@@ -19,4 +24,9 @@ services:
     ports:
       - '5432:5432'
     volumes:
-      - ./venda_data:/var/lib/venda/data
+      - ./pgdata:/var/lib/postgresql/data
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+# Seção para declarar o volume
+volumes:
+  pgdata:
